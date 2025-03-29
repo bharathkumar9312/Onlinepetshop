@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap');
+
+html {
+  font-size: 14px;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  object-position: top;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.old_price {
+  font-weight: bold;
+  color: red;
+}
+
+.new_price {
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.pic-box {
+  position: relative;
+}
+
+.hot {
+  background-color: orangered;
+  color: white;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  display: inline;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+}
+.card img {
+  width: 100%;  /* Makes the image fill the card */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+}
+.card {
+  height: 100%; /* Makes all cards equal height */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1; /* Ensures text area expands equally */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fixed-image {
+  width: 100%; /* Makes images fill the card width */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures the image fits without distortion */
+}

@@ -1,0 +1,54 @@
+{% extends 'shop/layout/base.html' %}
+{% block title %}
+Contact Us | Online Petshop
+{% endblock title %}
+
+{% block content %}
+<section class="bg-light py-4 my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h4 class="mb-3">Contact Us</h4>
+        <hr style="border-color:#b8bfc2;">
+        <p>Have questions? Get in touch with us!</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm">
+          <h5>Send Us a Message</h5>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm">
+          <h5>Our Contact Details</h5>
+          <p><i class="fa fa-map-marker"></i> Address: Trichy,Tamil Nadu,India</p>
+          <p><i class="fa fa-envelope"></i> Email: bharathbharathkumar807@gmail.com</p>
+          <p><i class="fa fa-phone"></i> Phone: +91 9345733128</p>
+          <p><i class="fa fa-clock"></i> Working Hours: 9 AM - 6 PM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
